@@ -1,0 +1,25 @@
+TODO:
+1) Remove global "evolve" and force interaction for crossover
+	a) Grey out (temporarily?) "Evolve" button?
+	b) Perhaps redesign UI to give "Simulate Mating"
+	   feature?
+3) Create new "GenericAgent" class
+	a) Create generic Sensor and Actuator interfaces that
+	   can be represented by input and output neurons
+	   respectively (consider Component interface? 
+	   Probably not, but we can refer to them both as
+	   components from here-on-out))
+	b) Move rendering code to agent/sensors/actuators 
+3) Rewrite OptimizableNeuralNetwork to evolve inputs and outputs
+
+FUTURE IDEAS:
+	- Need combat components
+	- Need communication components
+		- olfactory components
+		- auditory components
+		- wavelength-based visual components
+		
+	- More advanced rendering code to support .PNG's for
+	  sensors/actuators
+	- Create "base" agents with a few minimal sensors/
+	  actuators
