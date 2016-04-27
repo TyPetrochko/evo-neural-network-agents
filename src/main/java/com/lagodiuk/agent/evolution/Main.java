@@ -75,6 +75,8 @@ public class Main {
 
 	private static volatile boolean regenerateFood = true;
 
+	private static volatile boolean allowMating = false;
+
 	// UI
 
 	private static JFrame appFrame;
@@ -102,6 +104,8 @@ public class Main {
 	private static ButtonGroup foodTypeButtonGroup;
 
 	private static JCheckBox regenerateFoodCheckbox;
+
+	private static JCheckBox allowMatingCheckbox;
 
 	private static JProgressBar progressBar;
 
@@ -262,6 +266,10 @@ public class Main {
 		regenerateFoodCheckbox.setSelected(regenerateFood);
 		controlsPanel.add(regenerateFoodCheckbox);
 
+		allowMatingCheckbox = new JCheckBox("allow mating");
+		allowMatingCheckbox.setSelected(false);
+		controlsPanel.add(allowMatingCheckbox);
+
 		playPauseButton = new JButton("pause");
 		controlsPanel.add(playPauseButton);
 
@@ -320,6 +328,15 @@ public class Main {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				regenerateFood = !regenerateFood;
+			}
+		});
+	}
+
+	public static void initializeAllowMatingCheckboxFunctionality() {
+		allowMatingCheckbox.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				allowMating = !allowMating;
 			}
 		});
 	}
